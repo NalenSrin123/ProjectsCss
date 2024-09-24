@@ -1,0 +1,484 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image:url('https://websitedemos.net/gift-shop-04/wp-content/uploads/sites/919/2021/07/box-01.jpg');
+    background-size: cover;
+    padding: 20px 0;
+}
+.header{
+    width: 80%;
+    height: 100%;
+    /* background-color: aqua; */
+    margin: auto;
+}
+.menu-header{
+    width: 100%;
+    height: 80px;
+    /* background-color: aqua; */
+    display: flex;
+}
+.menu-header .logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.menu-header .logo img{
+    width: 120px;
+}
+.menu-header .menu{
+    width: 60%;
+    height: 100%;
+}
+.menu-header .menu ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.menu-header .menu ul li a{
+    text-decoration: none;
+    color: #413E65;
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu-header .menu ul li a:hover{
+    color: #4b42af;
+}
+.menu-header .menu .drop{
+    position: relative;
+    
+    
+}
+.menu-header .menu .drop:hover .drop-down{
+    display: block;
+    animation-name: drop;
+    animation-duration: 0.7s;
+    
+}
+.menu-header .menu .drop .drop-down{
+    width: 200px;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    display: none;
+    border-top:2px solid #4b42af;
+    z-index: 111;
+    border-radius: 0 0 5px 5px;
+   animation-name: drop;
+   animation-duration: 0.7s;
+   animation-fill-mode: forwards;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+.menu-header .menu .drop .drop-down ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.menu-header .shop{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.menu-header .shop p{
+    color: #413E65;
+    font-size: 18px;
+}
+.menu-header .shop i{
+    color: #413E65;
+    font-size: 18px;
+}
+.title{
+    width: 50%;
+    /* background-color: red; */
+    margin-top: 5rem;
+}
+.title h1{
+    font-size: 60px;
+    color: #413E65;
+}
+.title p{
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    opacity: 0.9;
+}
+.title button{
+    margin-top: 30px;
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    background-color:#4b42af;
+}
+.title button:hover{
+    transition: 0.7s;
+    background-color: rgb(255, 104, 10);
+}
+section{
+    width: 100%;
+    
+}
+.new-arrive{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+.new-arrive h1{
+    text-align: center;
+    position: relative;
+}
+.new-arrive h1::before{
+    content: '';
+    width:50px;
+    height: 5px;
+    background-color: rgb(255, 87, 20);
+    position: absolute;
+    top: 50px;
+    left: 48%;
+
+}
+.new-arrive .box-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin-top: 100px;
+}
+.new-arrive .box-card .card{
+    height: 380px;
+    position: relative;
+}
+.new-arrive .box-card .card .image{
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+}
+.card .image img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.card .image:hover img{
+
+    transform: scale(1.1) translateY(-10px);
+  
+    
+}
+.card .body{
+    width: 100%;
+    height: 35%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card .body p{
+    font-size: 14px;
+}
+.body p:nth-child(1){
+    opacity: 0.8;
+}
+.body p:nth-child(3){
+    color: red;
+
+}
+.card .icon{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    visibility: hidden;
+    
+}
+.card .icon i{
+    position: relative;
+    padding: 8px 7px;
+    border-radius: 50%;
+    background-color: #ffffffb8;
+}
+.card:hover .icon{
+    visibility: visible;
+}
+.card .icon i span{
+    display: none;
+    position: absolute;
+    font-size: 8px;
+    /* width: 120px; */
+    padding: 10px 15px;
+    background-color: #413E65;
+    left: -95px;
+    top: 5px;
+    border-radius: 10px;
+    color: #fff;
+}
+.card .icon i:hover span{
+    display: block;
+    transition: 0.5s;
+}
+.banner{
+    width: 80%;
+    margin: auto;
+    background-image: url('https://websitedemos.net/gift-shop-04/wp-content/uploads/sites/919/2021/07/bg-01.jpg');
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+.banner .sub-title{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+    padding: 30px;
+}
+.banner .sub-title h3{
+    font-size: 25px;
+    margin-top: 20px;
+    color: #413E65;
+}
+.banner .sub-title h3:nth-child(2){
+    margin-top: 50px;
+    font-size: 30px;
+}
+.price{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+.price p,del{
+    font-size: 25px;
+    color: #413E65;
+}
+.price p{
+    color: #F24C54;
+}
+.sub-title button{
+    padding: 15px 20px;
+    margin-top: 40px;
+    color: #fff;
+    background-color: #413E65;
+    border: none;
+}
+.sub-title button:hover{
+    background-color: #F24C54;
+    transition: 0.3s;
+}
+.img{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+ .img img{
+    width: 100%;
+}
+.shop-by-cate{
+    width: 80%;
+    height: 400px;
+    /* background-color: red; */
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px 0;
+}
+.shop-by-cate h1{
+    text-align: center;
+    position: relative;
+}
+.shop-by-cate h1::before{
+    content: ' ';
+    width: 50px;
+    height: 4px;
+    background-color: #F24C54;
+    position: absolute;
+    top: 50px;
+    left: 47%;
+}
+.shop-by-cate .box-card{
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px; 
+}
+.shop-by-cate .box-card .cards{
+    height: 330px;
+    /* background-color: #4b42af; */
+}
+.shop-by-cate .box-card .cards .imges{
+    width: 100%;
+    height: 80%;
+    background-color: red;
+}
+.shop-by-cate .box-card .cards .imges img{
+   width: 100%;
+   height: 100%;
+    cursor: pointer;
+}
+.shop-by-cate .box-card .cards .des{
+    margin-top: 10px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border-bottom: 2px solid #333;
+}
+.shop-by-cate .box-card .cards .des a{
+    text-decoration: none;
+    color: #413E65;
+}
+ hr{
+    opacity: 0.5;
+ }
+ .Special{
+    width: 100%;
+    padding: 50px 0;
+    margin-top: 200px;
+    background-color: #f9f8f8;
+ }
+ .Special h1{
+    text-align: center;
+    position: relative;
+}
+
+.Special h1::before{
+    content: ' ';
+    width: 50px;
+    height: 4px;
+    background-color: #F24C54;
+    position: absolute;
+    top: 50px;
+    left: 47%;
+}
+.Special .box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-top: 70px;
+    gap: 15px;
+    height: 400px;
+}
+.Special .box .box-left{
+    width: 50%;
+    height: 100%;
+    background-image: url('https://websitedemos.net/gift-shop-04/wp-content/uploads/sites/919/2021/07/bg-04.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 25px 20px;
+}
+.Special .box .box-left .box-title{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 0 20px;
+}
+ .Special .box .box-left .box-title h4{
+    font-size: 25px;
+    margin-top: 10px;
+}
+.Special .box .box-left .box-title del,.Special .box .box-left .box-title p{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+} 
+.Special .box .box-left .box-title button{
+    color: #fff;
+    background-color: #4b42af;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.Special .box .box-left .box-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Special .box .box-right{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Special .box .box-right .content{
+    background-image: url('https://websitedemos.net/gift-shop-04/wp-content/uploads/sites/919/2021/07/bg-02.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    
+}
+.Special .box .box-right .content:nth-child(2){
+    background-image: url('https://websitedemos.net/gift-shop-04/wp-content/uploads/sites/919/2021/07/bg-03.jpg');
+}
+.title-content{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+.title-content .prices{
+    display: flex;
+    gap: 20px;
+}
+.title-content .prices del{
+    color: #413E65;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title-content .prices p{
+    color: #F24C54;
+    font-size: 25px;
+    font-weight: bold;
+}
+.title-content .des p{
+    font-size: 18px;
+    color: #413E65;
+    font-weight: bold;
+}
+.image-content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes drop{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
